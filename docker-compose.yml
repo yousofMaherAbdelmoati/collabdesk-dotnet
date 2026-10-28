@@ -1,0 +1,49 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: collabdesk
+      POSTGRES_USER: collabdesk
+      POSTGRES_PASSWORD: collabdesk
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U collabdesk -d collabdesk"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks: [backend]
+  redis:
+    image: redis:7-alpine
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    networks: [backend]
+  api:
+    build: .
+    environment:
+      # This Compose file is a local fictional-data demonstration, never an Internet-facing deployment.
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__Postgres: Host=db;Database=collabdesk;Username=collabdesk;Password=collabdesk
+      Redis: redis:6379
+      SignalR__UseRedisBackplane: "true"
+      Security__LoginRateLimit__PermitLimit: 10
+    depends_on: { db: { condition: service_healthy }, redis: { condition: service_healthy } }
+    # 5000 is deliberately outside the Django demo's usual 3000/8000 ports. The
+    # React build is served by ASP.NET Core from this same origin.
+    # Bind only to the local machine: Development seeds public fixture credentials over HTTP.
+    ports: ["127.0.0.1:5000:8080"]
+    networks: [edge, backend]
+
+volumes:
+  postgres-data:
+
+networks:
+  # Only the API joins the edge network. PostgreSQL and Redis have no host ports
+  # and are reachable solely through this internal service network.
+  edge: {}
+  backend:
+    internal: true

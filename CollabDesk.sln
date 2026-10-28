@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollabDesk.Domain", "src\\CollabDesk.Domain\\CollabDesk.Domain.csproj", "{0D54D455-8D54-4F58-902B-B25B25D9AC01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollabDesk.Infrastructure", "src\\CollabDesk.Infrastructure\\CollabDesk.Infrastructure.csproj", "{81A3674D-B51D-4C9B-8B58-6DA98C631602}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollabDesk.Application", "src\\CollabDesk.Application\\CollabDesk.Application.csproj", "{AECA834E-1D23-4A80-A5EC-2C4473B91103}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollabDesk.Api", "src\\CollabDesk.Api\\CollabDesk.Api.csproj", "{11943DBA-9DC6-4A82-8B27-E39180131704}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollabDesk.IntegrationTests", "tests\\CollabDesk.IntegrationTests\\CollabDesk.IntegrationTests.csproj", "{CBEAE0D8-1328-44D6-A016-AF7C19DE1505}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollabDesk.Benchmarks", "tools\\CollabDesk.Benchmarks\\CollabDesk.Benchmarks.csproj", "{D4FB06B8-2CD8-4D09-A33C-9477BF31783}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D54D455-8D54-4F58-902B-B25B25D9AC01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D54D455-8D54-4F58-902B-B25B25D9AC01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D54D455-8D54-4F58-902B-B25B25D9AC01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D54D455-8D54-4F58-902B-B25B25D9AC01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81A3674D-B51D-4C9B-8B58-6DA98C631602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81A3674D-B51D-4C9B-8B58-6DA98C631602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81A3674D-B51D-4C9B-8B58-6DA98C631602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81A3674D-B51D-4C9B-8B58-6DA98C631602}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AECA834E-1D23-4A80-A5EC-2C4473B91103}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AECA834E-1D23-4A80-A5EC-2C4473B91103}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AECA834E-1D23-4A80-A5EC-2C4473B91103}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AECA834E-1D23-4A80-A5EC-2C4473B91103}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11943DBA-9DC6-4A82-8B27-E39180131704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11943DBA-9DC6-4A82-8B27-E39180131704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11943DBA-9DC6-4A82-8B27-E39180131704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11943DBA-9DC6-4A82-8B27-E39180131704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBEAE0D8-1328-44D6-A016-AF7C19DE1505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBEAE0D8-1328-44D6-A016-AF7C19DE1505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBEAE0D8-1328-44D6-A016-AF7C19DE1505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBEAE0D8-1328-44D6-A016-AF7C19DE1505}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4FB06B8-2CD8-4D09-A33C-9477BF31783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4FB06B8-2CD8-4D09-A33C-9477BF31783}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4FB06B8-2CD8-4D09-A33C-9477BF31783}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4FB06B8-2CD8-4D09-A33C-9477BF31783}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

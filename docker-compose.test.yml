@@ -1,0 +1,14 @@
+# Test-only override.  It exposes the disposable dependencies to the host test
+# runner; the production/local-development compose file intentionally does not.
+services:
+  db:
+    networks: [backend, test]
+    ports:
+      - "127.0.0.1:55433:5432"
+  redis:
+    networks: [backend, test]
+    ports:
+      - "127.0.0.1:56380:6379"
+
+networks:
+  test: {}

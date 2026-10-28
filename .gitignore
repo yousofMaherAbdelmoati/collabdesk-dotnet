@@ -1,0 +1,28 @@
+# .NET build and test output
+[Bb]in/
+[Oo]bj/
+TestResults/
+*.trx
+*.coverage
+coverage/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+secrets.json
+appsettings.Local.json
+
+# IDE and OS files
+.vs/
+.idea/
+*.user
+*.suo
+.DS_Store
+Thumbs.db
+
+# Frontend generated artifacts
+frontend/node_modules/
+frontend/dist/
+frontend/playwright-report/
+frontend/test-results/

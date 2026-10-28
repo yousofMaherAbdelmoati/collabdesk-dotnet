@@ -1,0 +1,395 @@
+{
+  "Task": "NET-012",
+  "RecordedAtUtc": "2026-10-24T18:01:42.9450081+00:00",
+  "TicketCount": 100000,
+  "Seed": 12012,
+  "WarmupIterations": 3,
+  "MeasurementIterations": 15,
+  "From": "2026-01-01",
+  "To": "2026-03-31",
+  "DotnetVersion": "10.0.13",
+  "OperatingSystem": "Ubuntu 24.04.5 LTS",
+  "PostgreSqlServerVersion": "16.15",
+  "RedisServerVersion": "7.4.11",
+  "PrecomputeSetupMilliseconds": 25232.8622,
+  "Measurements": [
+    {
+      "Strategy": "on-demand-ef",
+      "Phase": "warmup",
+      "Iteration": 0,
+      "LatencyMilliseconds": 77.6727,
+      "DatabaseQueryCount": 3
+    },
+    {
+      "Strategy": "on-demand-ef",
+      "Phase": "warmup",
+      "Iteration": 1,
+      "LatencyMilliseconds": 75.9037,
+      "DatabaseQueryCount": 3
+    },
+    {
+      "Strategy": "on-demand-ef",
+      "Phase": "warmup",
+      "Iteration": 2,
+      "LatencyMilliseconds": 77.5836,
+      "DatabaseQueryCount": 3
+    },
+    {
+      "Strategy": "on-demand-ef",
+      "Phase": "measurement",
+      "Iteration": 3,
+      "LatencyMilliseconds": 77.724,
+      "DatabaseQueryCount": 3
+    },
+    {
+      "Strategy": "on-demand-ef",
+      "Phase": "measurement",
+      "Iteration": 4,
+      "LatencyMilliseconds": 77.1545,
+      "DatabaseQueryCount": 3
+    },
+    {
+      "Strategy": "on-demand-ef",
+      "Phase": "measurement",
+      "Iteration": 5,
+      "LatencyMilliseconds": 79.3773,
+      "DatabaseQueryCount": 3
+    },
+    {
+      "Strategy": "on-demand-ef",
+      "Phase": "measurement",
+      "Iteration": 6,
+      "LatencyMilliseconds": 79.0668,
+      "DatabaseQueryCount": 3
+    },
+    {
+      "Strategy": "on-demand-ef",
+      "Phase": "measurement",
+      "Iteration": 7,
+      "LatencyMilliseconds": 76.3296,
+      "DatabaseQueryCount": 3
+    },
+    {
+      "Strategy": "on-demand-ef",
+      "Phase": "measurement",
+      "Iteration": 8,
+      "LatencyMilliseconds": 78.3536,
+      "DatabaseQueryCount": 3
+    },
+    {
+      "Strategy": "on-demand-ef",
+      "Phase": "measurement",
+      "Iteration": 9,
+      "LatencyMilliseconds": 77.9052,
+      "DatabaseQueryCount": 3
+    },
+    {
+      "Strategy": "on-demand-ef",
+      "Phase": "measurement",
+      "Iteration": 10,
+      "LatencyMilliseconds": 82.1697,
+      "DatabaseQueryCount": 3
+    },
+    {
+      "Strategy": "on-demand-ef",
+      "Phase": "measurement",
+      "Iteration": 11,
+      "LatencyMilliseconds": 81.1813,
+      "DatabaseQueryCount": 3
+    },
+    {
+      "Strategy": "on-demand-ef",
+      "Phase": "measurement",
+      "Iteration": 12,
+      "LatencyMilliseconds": 76.889,
+      "DatabaseQueryCount": 3
+    },
+    {
+      "Strategy": "on-demand-ef",
+      "Phase": "measurement",
+      "Iteration": 13,
+      "LatencyMilliseconds": 75.8297,
+      "DatabaseQueryCount": 3
+    },
+    {
+      "Strategy": "on-demand-ef",
+      "Phase": "measurement",
+      "Iteration": 14,
+      "LatencyMilliseconds": 77.84,
+      "DatabaseQueryCount": 3
+    },
+    {
+      "Strategy": "on-demand-ef",
+      "Phase": "measurement",
+      "Iteration": 15,
+      "LatencyMilliseconds": 80.9374,
+      "DatabaseQueryCount": 3
+    },
+    {
+      "Strategy": "on-demand-ef",
+      "Phase": "measurement",
+      "Iteration": 16,
+      "LatencyMilliseconds": 82.5782,
+      "DatabaseQueryCount": 3
+    },
+    {
+      "Strategy": "on-demand-ef",
+      "Phase": "measurement",
+      "Iteration": 17,
+      "LatencyMilliseconds": 78.9476,
+      "DatabaseQueryCount": 3
+    },
+    {
+      "Strategy": "precomputed",
+      "Phase": "warmup",
+      "Iteration": 0,
+      "LatencyMilliseconds": 8.2017,
+      "DatabaseQueryCount": 1
+    },
+    {
+      "Strategy": "precomputed",
+      "Phase": "warmup",
+      "Iteration": 1,
+      "LatencyMilliseconds": 0.8695,
+      "DatabaseQueryCount": 1
+    },
+    {
+      "Strategy": "precomputed",
+      "Phase": "warmup",
+      "Iteration": 2,
+      "LatencyMilliseconds": 0.5379,
+      "DatabaseQueryCount": 1
+    },
+    {
+      "Strategy": "precomputed",
+      "Phase": "measurement",
+      "Iteration": 3,
+      "LatencyMilliseconds": 0.7006,
+      "DatabaseQueryCount": 1
+    },
+    {
+      "Strategy": "precomputed",
+      "Phase": "measurement",
+      "Iteration": 4,
+      "LatencyMilliseconds": 0.6784,
+      "DatabaseQueryCount": 1
+    },
+    {
+      "Strategy": "precomputed",
+      "Phase": "measurement",
+      "Iteration": 5,
+      "LatencyMilliseconds": 0.5554,
+      "DatabaseQueryCount": 1
+    },
+    {
+      "Strategy": "precomputed",
+      "Phase": "measurement",
+      "Iteration": 6,
+      "LatencyMilliseconds": 0.6893,
+      "DatabaseQueryCount": 1
+    },
+    {
+      "Strategy": "precomputed",
+      "Phase": "measurement",
+      "Iteration": 7,
+      "LatencyMilliseconds": 2.2811,
+      "DatabaseQueryCount": 1
+    },
+    {
+      "Strategy": "precomputed",
+      "Phase": "measurement",
+      "Iteration": 8,
+      "LatencyMilliseconds": 0.6772,
+      "DatabaseQueryCount": 1
+    },
+    {
+      "Strategy": "precomputed",
+      "Phase": "measurement",
+      "Iteration": 9,
+      "LatencyMilliseconds": 0.6332,
+      "DatabaseQueryCount": 1
+    },
+    {
+      "Strategy": "precomputed",
+      "Phase": "measurement",
+      "Iteration": 10,
+      "LatencyMilliseconds": 0.6446,
+      "DatabaseQueryCount": 1
+    },
+    {
+      "Strategy": "precomputed",
+      "Phase": "measurement",
+      "Iteration": 11,
+      "LatencyMilliseconds": 0.6176,
+      "DatabaseQueryCount": 1
+    },
+    {
+      "Strategy": "precomputed",
+      "Phase": "measurement",
+      "Iteration": 12,
+      "LatencyMilliseconds": 0.6326,
+      "DatabaseQueryCount": 1
+    },
+    {
+      "Strategy": "precomputed",
+      "Phase": "measurement",
+      "Iteration": 13,
+      "LatencyMilliseconds": 0.5988,
+      "DatabaseQueryCount": 1
+    },
+    {
+      "Strategy": "precomputed",
+      "Phase": "measurement",
+      "Iteration": 14,
+      "LatencyMilliseconds": 0.6008,
+      "DatabaseQueryCount": 1
+    },
+    {
+      "Strategy": "precomputed",
+      "Phase": "measurement",
+      "Iteration": 15,
+      "LatencyMilliseconds": 0.6038,
+      "DatabaseQueryCount": 1
+    },
+    {
+      "Strategy": "precomputed",
+      "Phase": "measurement",
+      "Iteration": 16,
+      "LatencyMilliseconds": 0.6202,
+      "DatabaseQueryCount": 1
+    },
+    {
+      "Strategy": "precomputed",
+      "Phase": "measurement",
+      "Iteration": 17,
+      "LatencyMilliseconds": 0.622,
+      "DatabaseQueryCount": 1
+    },
+    {
+      "Strategy": "redis-cached",
+      "Phase": "warmup",
+      "Iteration": 0,
+      "LatencyMilliseconds": 8.951,
+      "DatabaseQueryCount": 0
+    },
+    {
+      "Strategy": "redis-cached",
+      "Phase": "warmup",
+      "Iteration": 1,
+      "LatencyMilliseconds": 0.6128,
+      "DatabaseQueryCount": 0
+    },
+    {
+      "Strategy": "redis-cached",
+      "Phase": "warmup",
+      "Iteration": 2,
+      "LatencyMilliseconds": 0.4121,
+      "DatabaseQueryCount": 0
+    },
+    {
+      "Strategy": "redis-cached",
+      "Phase": "measurement",
+      "Iteration": 3,
+      "LatencyMilliseconds": 0.5498,
+      "DatabaseQueryCount": 0
+    },
+    {
+      "Strategy": "redis-cached",
+      "Phase": "measurement",
+      "Iteration": 4,
+      "LatencyMilliseconds": 0.6279,
+      "DatabaseQueryCount": 0
+    },
+    {
+      "Strategy": "redis-cached",
+      "Phase": "measurement",
+      "Iteration": 5,
+      "LatencyMilliseconds": 0.4863,
+      "DatabaseQueryCount": 0
+    },
+    {
+      "Strategy": "redis-cached",
+      "Phase": "measurement",
+      "Iteration": 6,
+      "LatencyMilliseconds": 0.6667,
+      "DatabaseQueryCount": 0
+    },
+    {
+      "Strategy": "redis-cached",
+      "Phase": "measurement",
+      "Iteration": 7,
+      "LatencyMilliseconds": 0.6603,
+      "DatabaseQueryCount": 0
+    },
+    {
+      "Strategy": "redis-cached",
+      "Phase": "measurement",
+      "Iteration": 8,
+      "LatencyMilliseconds": 0.6539,
+      "DatabaseQueryCount": 0
+    },
+    {
+      "Strategy": "redis-cached",
+      "Phase": "measurement",
+      "Iteration": 9,
+      "LatencyMilliseconds": 0.5794,
+      "DatabaseQueryCount": 0
+    },
+    {
+      "Strategy": "redis-cached",
+      "Phase": "measurement",
+      "Iteration": 10,
+      "LatencyMilliseconds": 0.5214,
+      "DatabaseQueryCount": 0
+    },
+    {
+      "Strategy": "redis-cached",
+      "Phase": "measurement",
+      "Iteration": 11,
+      "LatencyMilliseconds": 0.5895,
+      "DatabaseQueryCount": 0
+    },
+    {
+      "Strategy": "redis-cached",
+      "Phase": "measurement",
+      "Iteration": 12,
+      "LatencyMilliseconds": 0.5836,
+      "DatabaseQueryCount": 0
+    },
+    {
+      "Strategy": "redis-cached",
+      "Phase": "measurement",
+      "Iteration": 13,
+      "LatencyMilliseconds": 0.6056,
+      "DatabaseQueryCount": 0
+    },
+    {
+      "Strategy": "redis-cached",
+      "Phase": "measurement",
+      "Iteration": 14,
+      "LatencyMilliseconds": 0.5678,
+      "DatabaseQueryCount": 0
+    },
+    {
+      "Strategy": "redis-cached",
+      "Phase": "measurement",
+      "Iteration": 15,
+      "LatencyMilliseconds": 0.4648,
+      "DatabaseQueryCount": 0
+    },
+    {
+      "Strategy": "redis-cached",
+      "Phase": "measurement",
+      "Iteration": 16,
+      "LatencyMilliseconds": 0.4,
+      "DatabaseQueryCount": 0
+    },
+    {
+      "Strategy": "redis-cached",
+      "Phase": "measurement",
+      "Iteration": 17,
+      "LatencyMilliseconds": 0.4781,
+      "DatabaseQueryCount": 0
+    }
+  ]
+}

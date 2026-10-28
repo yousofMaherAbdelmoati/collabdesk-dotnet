@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Restore, build, and test .NET
+        run: |
+          dotnet restore
+          dotnet build CollabDesk.sln --no-restore --warnaserror
+          dotnet test CollabDesk.sln --no-build --no-restore
+      - name: Build frontend
+        working-directory: frontend
+        run: |
+          npm ci
+          npm run build
+      - name: Dependency review
+        run: |
+          dotnet list CollabDesk.sln package --vulnerable --include-transitive
+          (cd frontend && npm audit --omit=dev --audit-level=high)
+      - name: Secret scan including history
+        run: scripts/verify-no-secrets.sh
+      - name: Start isolated PostgreSQL and Redis
+        run: docker compose -p collabdesk-ci-tests -f docker-compose.yml -f docker-compose.test.yml up -d --wait db redis
+      - name: Run real-service acceptance tests
+        env:
+          COLLABDESK_TEST_POSTGRES: Host=127.0.0.1;Port=55433;Database=collabdesk_test_ci;Username=collabdesk;Password=collabdesk
+          COLLABDESK_TEST_REDIS: 127.0.0.1:56380
+        run: dotnet test CollabDesk.sln --no-build --no-restore
+      - name: Clean isolated services
+        if: always()
+        run: docker compose -p collabdesk-ci-tests -f docker-compose.yml -f docker-compose.test.yml down --volumes --remove-orphans
